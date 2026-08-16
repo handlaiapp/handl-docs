@@ -1,0 +1,418 @@
+<title>handl. Privacy Policy</title>
+<style>
+  :root {
+    --bg: #F7F7F5;
+    --surface: #FFFFFF;
+    --text-primary: #1A1D29;
+    --text-secondary: #565B72;
+    --text-tertiary: #8A8FA3;
+    --accent: #2748AD;
+    --accent-soft: #EEF1FA;
+    --border: #E4E4E8;
+    --serif: Iowan Old Style, "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+    --sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #07080D;
+      --surface: #12141C;
+      --text-primary: #F6F7FB;
+      --text-secondary: #8D92AA;
+      --text-tertiary: #5B5F73;
+      --accent: #6E8CF0;
+      --accent-soft: rgba(110, 140, 240, 0.12);
+      --border: #262A38;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #07080D;
+    --surface: #12141C;
+    --text-primary: #F6F7FB;
+    --text-secondary: #8D92AA;
+    --text-tertiary: #5B5F73;
+    --accent: #6E8CF0;
+    --accent-soft: rgba(110, 140, 240, 0.12);
+    --border: #262A38;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text-primary);
+    font-family: var(--sans);
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 240px minmax(0, 700px);
+    gap: 64px;
+    padding: 72px 32px 120px;
+  }
+
+  @media (max-width: 900px) {
+    .page {
+      grid-template-columns: 1fr;
+      padding: 40px 20px 80px;
+      gap: 32px;
+    }
+    nav.toc { display: none; }
+  }
+
+  header.masthead {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 28px;
+    margin-bottom: 8px;
+  }
+
+  .wordmark {
+    font-family: var(--sans);
+    font-weight: 800;
+    font-size: 15px;
+    letter-spacing: -0.2px;
+    color: var(--text-primary);
+  }
+  .wordmark span { color: var(--accent); }
+
+  .doc-meta {
+    font-size: 12.5px;
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+  }
+
+  nav.toc {
+    position: sticky;
+    top: 48px;
+    align-self: start;
+    font-size: 13.5px;
+  }
+
+  nav.toc .toc-label {
+    font-family: var(--sans);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    font-size: 11px;
+    color: var(--text-tertiary);
+    margin-bottom: 14px;
+  }
+
+  nav.toc ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    counter-reset: toc;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  nav.toc li { counter-increment: toc; }
+
+  nav.toc a {
+    display: block;
+    padding: 6px 0;
+    color: var(--text-secondary);
+    text-decoration: none;
+    border-left: 2px solid transparent;
+    padding-left: 12px;
+    margin-left: -13px;
+    transition: color 0.15s ease, border-color 0.15s ease;
+  }
+
+  nav.toc a::before {
+    content: counter(toc) "  ";
+    font-variant-numeric: tabular-nums;
+    color: var(--text-tertiary);
+  }
+
+  nav.toc a:hover {
+    color: var(--accent);
+    border-left-color: var(--accent);
+  }
+
+  main {
+    min-width: 0;
+  }
+
+  .hero-title {
+    font-family: var(--serif);
+    font-size: 42px;
+    font-weight: 400;
+    line-height: 1.15;
+    letter-spacing: -0.3px;
+    text-wrap: balance;
+    margin: 0 0 10px;
+    color: var(--text-primary);
+  }
+
+  .hero-sub {
+    font-size: 16px;
+    color: var(--text-secondary);
+    max-width: 60ch;
+    line-height: 1.6;
+    margin: 0 0 44px;
+  }
+
+  section {
+    padding: 40px 0;
+    border-bottom: 1px solid var(--border);
+    scroll-margin-top: 40px;
+  }
+  section:last-of-type { border-bottom: none; }
+
+  .section-number {
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 26px;
+    letter-spacing: -0.2px;
+    margin: 0 0 18px;
+    text-wrap: balance;
+  }
+
+  h3 {
+    font-family: var(--sans);
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--text-primary);
+    margin: 26px 0 10px;
+  }
+
+  p {
+    font-size: 15.5px;
+    line-height: 1.72;
+    color: var(--text-secondary);
+    max-width: 66ch;
+    margin: 0 0 16px;
+  }
+
+  p strong, li strong { color: var(--text-primary); font-weight: 600; }
+
+  ul {
+    margin: 0 0 16px;
+    padding-left: 20px;
+    max-width: 64ch;
+  }
+
+  li {
+    font-size: 15.5px;
+    line-height: 1.72;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+
+  .callout {
+    background: var(--accent-soft);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin: 20px 0;
+    max-width: 64ch;
+  }
+  .callout p { margin: 0; color: var(--text-primary); font-size: 14.5px; }
+
+  .service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    gap: 10px;
+    margin: 18px 0 20px;
+    max-width: 66ch;
+  }
+
+  .service-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px 14px;
+  }
+
+  .service-card .name {
+    font-family: var(--sans);
+    font-weight: 700;
+    font-size: 13.5px;
+    color: var(--text-primary);
+    margin-bottom: 3px;
+  }
+
+  .service-card .role {
+    font-size: 12.5px;
+    color: var(--text-tertiary);
+    line-height: 1.5;
+  }
+
+  footer {
+    padding-top: 44px;
+    margin-top: 8px;
+  }
+
+  footer .contact {
+    font-size: 15px;
+    color: var(--text-secondary);
+  }
+  footer .contact a { color: var(--accent); }
+
+  footer .fine {
+    margin-top: 28px;
+    font-size: 12.5px;
+    color: var(--text-tertiary);
+    line-height: 1.6;
+  }
+</style>
+
+<div class="page">
+  <header class="masthead">
+    <div class="wordmark">handl<span>.</span></div>
+    <div class="doc-meta">Privacy Policy · Last updated 13 August 2026</div>
+  </header>
+
+  <nav class="toc" aria-label="Table of contents">
+    <div class="toc-label">Contents</div>
+    <ol>
+      <li><a href="#information-we-collect">Information we collect</a></li>
+      <li><a href="#how-we-use-it">How we use it</a></li>
+      <li><a href="#how-we-share-it">How we share it</a></li>
+      <li><a href="#storage-security">Storage &amp; security</a></li>
+      <li><a href="#your-choices">Your choices</a></li>
+      <li><a href="#children">Children's privacy</a></li>
+      <li><a href="#changes">Changes to this policy</a></li>
+      <li><a href="#contact">Contact us</a></li>
+    </ol>
+  </nav>
+
+  <main>
+    <h1 class="hero-title">How handl. handles your information</h1>
+    <p class="hero-sub">
+      handl. is a personal assistant that places real phone calls, sends messages, and completes tasks on your behalf.
+      Doing that well means holding some genuinely sensitive information — this page explains exactly what, why, and who
+      else ever sees it.
+    </p>
+
+    <section id="information-we-collect">
+      <div class="section-number">01</div>
+      <h2>Information we collect</h2>
+
+      <h3>Profile</h3>
+      <p>Your name, date of birth, country of residence, email addresses and phone numbers (you can save several
+        of each, with one marked as default), and — only if you choose to add it — your passport number and expiry
+        date, seat preference, and any airline loyalty numbers.</p>
+
+      <h3>Payment</h3>
+      <p>Card details are handled and stored by <strong>Stripe</strong>, our payment processor — handl. itself never
+        sees or stores your full card number. Subscription status is managed by <strong>RevenueCat</strong>.</p>
+
+      <h3>Device permissions</h3>
+      <p>Only ever accessed after you grant them, and only for the purpose stated when you're asked:</p>
+      <ul>
+        <li><strong>Microphone</strong> — to turn a spoken task into text</li>
+        <li><strong>Camera &amp; Photos</strong> — to scan a receipt or letter</li>
+        <li><strong>Calendar</strong> — to check for clashes and add confirmed bookings</li>
+        <li><strong>Contacts</strong> — so you can pick someone for handl. to message or call</li>
+        <li><strong>Location</strong> — to prioritise nearby places and answer location-aware questions</li>
+        <li><strong>Face ID / passcode</strong> — to lock the app; your biometric data is processed entirely on-device by Apple or Google and never reaches our servers</li>
+      </ul>
+
+      <h3>Connected accounts</h3>
+      <p>If you choose to connect them: read-only access to recent <strong>Gmail</strong>/<strong>Outlook</strong>
+        inbox metadata (sender, subject, and a short snippet — never the full message body) to build your daily
+        digest, plus permission to create draft emails on your behalf; and, on the Business plan,
+        <strong>Xero</strong> access to create draft bills from scanned receipts.</p>
+
+      <h3>Task activity</h3>
+      <p>The tasks and commands you give handl., recordings and transcripts of calls it places for you, documents you
+        scan and the details extracted from them, and records of bookings, reminders, watched items, and
+        subscriptions you ask it to track.</p>
+    </section>
+
+    <section id="how-we-use-it">
+      <div class="section-number">02</div>
+      <h2>How we use it</h2>
+      <p>To do what you ask: placing calls, sending messages, completing bookings, drafting emails, building your
+        inbox digest and weekly briefing, processing payments, sending status notifications, and generally making
+        handl.'s automated actions more accurate and reliable over time.</p>
+    </section>
+
+    <section id="how-we-share-it">
+      <div class="section-number">03</div>
+      <h2>How we share it</h2>
+
+      <h3>With businesses you ask us to contact</h3>
+      <p>When handl. calls or messages a business on your behalf, it shares only the minimum needed to complete the
+        request — typically just your name, phone number, and email address.</p>
+
+      <h3>With service providers</h3>
+      <p>Each of the following only ever receives what it needs to do its specific job:</p>
+      <div class="service-grid">
+        <div class="service-card"><div class="name">Anthropic (Claude)</div><div class="role">Understands your commands and scanned documents</div></div>
+        <div class="service-card"><div class="name">OpenAI (Whisper)</div><div class="role">Transcribes voice input</div></div>
+        <div class="service-card"><div class="name">Vapi</div><div class="role">Places and manages calls for you</div></div>
+        <div class="service-card"><div class="name">Duffel</div><div class="role">Searches and books flights</div></div>
+        <div class="service-card"><div class="name">Stripe</div><div class="role">Processes payments</div></div>
+        <div class="service-card"><div class="name">RevenueCat</div><div class="role">Manages your subscription</div></div>
+        <div class="service-card"><div class="name">Google Places</div><div class="role">Looks up business details</div></div>
+        <div class="service-card"><div class="name">Google / Microsoft / Xero</div><div class="role">Only if you connect these yourself</div></div>
+      </div>
+      <div class="callout">
+        <p>We do not sell your personal information to anyone, for any reason.</p>
+      </div>
+    </section>
+
+    <section id="storage-security">
+      <div class="section-number">04</div>
+      <h2>Storage &amp; security</h2>
+      <p>Your data is stored on servers we operate, protected with encrypted transmission (HTTPS) and access
+        controls. Your passport number is stored securely and only ever displayed in masked form within the app.</p>
+    </section>
+
+    <section id="your-choices">
+      <div class="section-number">05</div>
+      <h2>Your choices</h2>
+      <ul>
+        <li>Update or delete your profile, passport number, or any saved contact or business at any time in the app</li>
+        <li>Disconnect Gmail, Outlook, or Xero at any time from Settings</li>
+        <li>Turn off App Lock or any individual device permission at any time in your device settings</li>
+        <li>Request a copy of your data, or ask us to delete it, by contacting us below</li>
+      </ul>
+    </section>
+
+    <section id="children">
+      <div class="section-number">06</div>
+      <h2>Children's privacy</h2>
+      <p>handl. is not intended for anyone under 16, and we do not knowingly collect information from children.</p>
+    </section>
+
+    <section id="changes">
+      <div class="section-number">07</div>
+      <h2>Changes to this policy</h2>
+      <p>We'll update the date at the top of this page whenever this policy changes, so it's easy to see if
+        anything's new.</p>
+    </section>
+
+    <footer id="contact">
+      <div class="section-number">08</div>
+      <h2>Contact us</h2>
+      <p class="contact">Questions about this policy or your data? Write to
+        <a href="mailto:ted.speller@live.com">ted.speller@live.com</a>.</p>
+    </footer>
+  </main>
+</div>
